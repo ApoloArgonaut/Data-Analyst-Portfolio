@@ -1,0 +1,20 @@
+.git
+.gitignore
+.venv
+.ruff_cache
+
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+Español/.ipython
+Español/.jupyter
+English/.ipython
+English/.jupyter
+
+Español/Data Analyst project
+English/Data Analyst project
+
+Español/notebooks/*.executed.ipynb
+English/notebooks/*.executed.ipynb

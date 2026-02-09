@@ -1,0 +1,12 @@
+.venv/
+.ruff_cache/
+.pytest_cache/
+.ipynb_checkpoints/
+
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+*.Zone.Identifier
+*:Zone.Identifier

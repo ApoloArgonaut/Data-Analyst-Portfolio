@@ -1,0 +1,32 @@
+services:
+  dashboard-en:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: data-analyst-portfolio-en
+    environment:
+      PROJECT_DIR: English
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/workspace
+    command: >
+      cd "$PROJECT_DIR" &&
+      python src/data/clean_survey.py &&
+      streamlit run app/streamlit_app.py --server.address=0.0.0.0 --server.port=8501
+
+  dashboard-es:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: data-analyst-portfolio-es
+    environment:
+      PROJECT_DIR: Español
+    ports:
+      - "8502:8501"
+    volumes:
+      - .:/workspace
+    command: >
+      cd "$PROJECT_DIR" &&
+      python src/data/clean_survey.py &&
+      streamlit run app/streamlit_app.py --server.address=0.0.0.0 --server.port=8501
